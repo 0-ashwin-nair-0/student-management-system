@@ -1,24 +1,28 @@
 # 🎓 Student Management System
 
-A full-stack Student Management System built using **React**, **Spring Boot**, and **MySQL**.
-
-The application allows users to perform complete CRUD (Create, Read, Update, Delete) operations on student records through a modern web interface.
+A Full Stack **Student Management System** built using **React**, **Spring Boot**, and **MySQL**. The application allows users to manage student records through a clean web interface by performing complete CRUD (Create, Read, Update, and Delete) operations.
 
 ---
 
-## 🚀 Features
+## 📸 Application Preview
 
-- ✅ Add Student
-- ✅ View All Students
-- ✅ Update Student Details
-- ✅ Delete Student
-- ✅ Responsive User Interface
-- ✅ RESTful API Integration
-- ✅ MySQL Database Connectivity
+![Student Management System](./screenshots/home.png)
 
 ---
 
-## 🛠 Tech Stack
+## ✨ Features
+
+- ➕ Add a new student
+- 📋 View all students
+- ✏️ Update student information
+- 🗑️ Delete student records
+- 🔄 Real-time UI updates after CRUD operations
+- 🌐 REST API integration using Axios
+- 💾 Data persistence with MySQL
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
 - React
@@ -37,124 +41,169 @@ The application allows users to perform complete CRUD (Create, Read, Update, Del
 
 ---
 
-## 📷 Screenshots
+## 📂 Project Structure
 
-### Home Page
-
-![Home](screenshots/home.png)
-
-### Add Student
-
-![Add Student](screenshots/add-student.png)
-
-### Edit Student
-
-![Edit Student](screenshots/edit-student.png)
-
----
-
-## 📁 Project Structure
-
-```
+```text
 student-management-system
 │
-├── backend
-├── frontend
-├── screenshots
+├── .mvn/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/ashwin/sms/sms
+│   │   │       ├── controller/
+│   │   │       ├── entity/
+│   │   │       ├── repository/
+│   │   │       ├── service/
+│   │   │       └── SmsApplication.java
+│   │   │
+│   │   └── resources/
+│   │
+│   └── test/
+│
+├── student-management-frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── StudentForm.jsx
+│   │   │   └── StudentTable.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   └── StudentService.js
+│   │   │
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   │
+│   ├── package.json
+│   └── vite.config.js
+│
+├── pom.xml
+├── mvnw
+├── mvnw.cmd
 └── README.md
 ```
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation & Setup
 
-### Backend
+### 1️⃣ Clone the repository
 
 ```bash
-cd backend
+git clone https://github.com/0-ashwin-nair-0/student-management-system.git
+```
 
+---
+
+### 2️⃣ Backend Setup
+
+```bash
+cd student-management-system
+```
+
+Create a MySQL database
+
+```sql
+CREATE DATABASE sms_db;
+```
+
+Update the database configuration in:
+
+```text
+src/main/resources/application.properties
+```
+
+Example:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/sms_db
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+
+spring.jpa.hibernate.ddl-auto=update
+```
+
+Run the Spring Boot application:
+
+```bash
+./mvnw spring-boot:run
+```
+
+or
+
+```bash
 mvn spring-boot:run
 ```
 
 ---
 
-### Frontend
+### 3️⃣ Frontend Setup
 
 ```bash
-cd frontend
+cd student-management-frontend
 
 npm install
 
 npm run dev
 ```
 
----
+The frontend will run on:
 
-## Database
-
-Create a database
-
-```sql
-CREATE DATABASE sms_db;
-```
-
-Update the database configuration in
-
-```
-application.properties
-```
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/sms_db
-spring.datasource.username=YOUR_USERNAME
-spring.datasource.password=YOUR_PASSWORD
+```text
+http://localhost:5173
 ```
 
 ---
 
-## REST APIs
+## 🔗 REST API Endpoints
 
 | Method | Endpoint | Description |
 |---------|----------|-------------|
-| GET | /students | Get All Students |
-| GET | /students/{id} | Get Student By ID |
-| POST | /students | Add Student |
-| PUT | /students/{id} | Update Student |
-| DELETE | /students/{id} | Delete Student |
+| GET | `/students` | Retrieve all students |
+| GET | `/students/{id}` | Retrieve a student by ID |
+| POST | `/students` | Add a new student |
+| PUT | `/students/{id}` | Update an existing student |
+| DELETE | `/students/{id}` | Delete a student |
 
 ---
 
-## Learning Outcomes
+## 📖 What I Learned
 
-This project helped me understand:
+During this project, I gained practical experience with:
 
 - React Components
-- React Hooks
-- Axios API Calls
-- Spring Boot REST APIs
-- MVC Architecture
-- CRUD Operations
-- MySQL Integration
+- React Hooks (`useState`, `useEffect`)
 - Component Communication using Props
-- State Management using useState
-- Side Effects using useEffect
+- Axios for API Integration
+- RESTful API Development
+- Spring Boot Architecture
+- Spring Data JPA
+- MySQL Database Integration
+- CRUD Operations
+- Full Stack Development Workflow
 
 ---
 
-## Future Improvements
+## 🚀 Future Improvements
 
-- Authentication & Login
-- Search Students
-- Pagination
-- Sorting
-- Validation
-- Docker Deployment
-- JWT Authentication
+- 🔐 User Authentication (JWT)
+- 🔍 Search Students
+- 📄 Pagination
+- 📊 Dashboard & Statistics
+- ✅ Form Validation
+- 📱 Responsive UI
+- 🐳 Docker Support
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-Ashwin
+**Ashwin Nair**
 
-GitHub: https://github.com/YOUR_USERNAME
+- GitHub: https://github.com/0-ashwin-nair-0
+
+---
+
+⭐ If you found this project useful, consider giving it a **Star** on GitHub!
