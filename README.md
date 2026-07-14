@@ -4,12 +4,6 @@ A Full Stack **Student Management System** built using **React**, **Spring Boot*
 
 ---
 
-## 📸 Application Preview
-
-![Student Management System](./screenshots/home.png)
-
----
-
 ## ✨ Features
 
 - ➕ Add a new student
